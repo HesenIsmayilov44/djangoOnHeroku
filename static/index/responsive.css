@@ -7,7 +7,7 @@
     nav .container{
         padding: 5px 15px;
     }
-    main .container h1{
+    section.main .container h1{
         padding: 15px 20px;
     }
 }
