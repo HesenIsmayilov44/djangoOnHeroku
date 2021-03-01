@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from portifolio.views import index
+from portifolio.views import index, comingsoon
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('home/', index),
+    path('about/', comingsoon),
+    path('cv/', comingsoon),
+    path('contact/', comingsoon),
 ]
