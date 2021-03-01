@@ -1,0 +1,1 @@
+web: gunicorn djangoonheroku.wsgi --log-file -
