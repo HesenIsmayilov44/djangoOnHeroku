@@ -28,7 +28,11 @@
     </nav>
     <section class="main">
         <div class="container " >
-            <h1>Hələki bura anlamlı bişeylər yaza bilmədim. İdare edin <span onclick="audioPlayer()" style="cursor: pointer;">🙃</span>.</h1>
+            <h1>Hələki bura anlamlı bişeylər yaza bilmədim. İdare edin.
+                <br>
+                Tap to emoji => <span onclick="audioPlayer()" style="cursor: pointer;">🙃</span>
+            </h1>
+
             
         </div>
     </section>
@@ -41,7 +45,6 @@
     </div>
     <script>
         function audioPlayer(){
-            window.alert("Here we go!!")
             var audio = new Audio('{% static "media/Akula.mp3" %}')
             audio.play()
 
