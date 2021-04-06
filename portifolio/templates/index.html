@@ -18,7 +18,7 @@
 <body>
     <nav>
         <div class="container">
-            <div class="logo"><a href="/home">Hasan</a></div>
+            <div class="logo" ><a href="/home">Hasan</a></div>
             <ul>
                 <li><a href="/about">About</a></li>
                 <li><a href="/cv">Cv</a></li>
@@ -27,10 +27,26 @@
         </div>
     </nav>
     <section class="main">
-        <div class="container">
-            <h1>Hələki bura anlamlı bişeylər yaza bilmədim. İdare edin 🙃.</h1>
+        <div class="container " >
+            <h1>Hələki bura anlamlı bişeylər yaza bilmədim. İdare edin <span onclick="audioPlayer()" style="cursor: pointer;">🙃</span>.</h1>
+            
         </div>
     </section>
+    <div class="box">
+        <div class="like-box">
+            <div></div>
+            <i class="fas fa-heart"></i>
+            <div></div>
+        </div>
+    </div>
+    <script>
+        function audioPlayer(){
+            window.alert("Here we go!!")
+            var audio = new Audio('{% static "media/Akula.mp3" %}')
+            audio.play()
+
+        }
+    </script>
     <footer></footer>
 </body>
 </html>
