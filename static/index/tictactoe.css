@@ -1,0 +1,21 @@
+.container1 h1{
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: center;
+}
+.game{
+    width: 30rem;
+    height: 30rem;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.game .box{
+    border: 2px solid #fff;
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    cursor: pointer;
+}
