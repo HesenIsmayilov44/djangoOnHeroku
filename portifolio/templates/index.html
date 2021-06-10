@@ -14,8 +14,7 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="{% static 'index/style.css' %}">
     <link rel="stylesheet" href="{% static 'index/responsive.css' %}">
-    <link rel="stylesheet" href="{% static 'index/tictactoe.css' %}">
-
+    
 </head>
 <body>
     <nav>
@@ -38,81 +37,15 @@
             
         </div>
 
-        <div class="container1">
-            <h1>Tic Tac Toe</h1>
-            <h2 class="info"></h2>
-            <div class="game">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-            </div>
-            <h2 class="error"></h2>
-        </div>
+        
     
     </section>
-    <div class="box">
-        <div class="like-box">
-            <div></div>
-            <i class="fas fa-heart"></i>
-            <div></div>
-        </div>
-    </div>
-    <script>
-        const boxs = document.querySelectorAll('.box')
-const errorText = document.querySelector(".error")
-let player = "X"
-boxs.forEach(box => box.addEventListener('click', () =>{
-    startGame(box)
-}))
+    
 
-function startGame(box){
-    if(isEmpty(box)){
-        box.textContent = player
-        checkWin()
-    }else{
-        error.textContent = "Error"
-    }
-    switchPlayer()
-}
-
-function switchPlayer(){
-    if(player === "X"){
-        player ="O"
-    }else if(player === "O"){
-        player ="X"
-    }
-}
-function isEmpty(box){
-    if(box.textContent === ""){
-        return true
-    }
-    return false
-}
-function checkWin(){
-    checkRows()
-    // checkColumns()
-    // checkDioganals()
-}
-function checkRows(){
-    let row1 = boxs[0].textContent == boxs[1].textContent && boxs[0].textContent == boxs[2].textContent && boxs[0].textContent != ""
-    let row2 = boxs[3].textContent == boxs[4].textContent && boxs[3].textContent == boxs[5].textContent && boxs[3].textContent != ""
-    let row3 = boxs[6].textContent == boxs[7].textContent && boxs[6].textContent == boxs[8].textContent && boxs[6].textContent != ""
-    if(row1 || row2 || row3){
-        console.log(`${player} won :)`)
-        boxs.forEach(box => box.textContent = "")
-    }
-}
-
-    </script>
     <script>
         function audioPlayer(){
             var audio = new Audio('{% static "media/Akula.mp3" %}')
+            audio.volume = 0.05;
             audio.play()
 
         }
